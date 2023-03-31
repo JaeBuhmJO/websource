@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        <select>, <option> : 드롭다운 목록 작성
+        select 속성
+            size : 화면에 표시될 드롭다운 메뉴의 항목 개수 지정
+            multiple : ctrl 누른 상태로 여러 항목 선택 가능
+        option 속성
+            selected
+
+            ?fruit=포도
+            ?fruit=바나나&fruit=딸기&fruit=배
+     -->
+    <div>
+      <form action="form4.html" method="get">
+        <label for="">과일 선택</label>
+        <select name="fruit" id="" size="5" multiple>
+          <option value="딸기">딸기</option>
+          <option value="당근">당근</option>
+          <option value="수박" selected>수박</option>
+          <option value="참외">참외</option>
+          <option value="메론">메론</option>
+        </select>
+        <div>
+          <input type="submit" value="전송" />
+        </div>
+      </form>
+    </div>
+    <div>
+      <form action="form4.html" method="get">
+        <label for="">과일 선택</label>
+        <select name="fruit" id="">
+          <option value="딸기">딸기</option>
+          <option value="당근">당근</option>
+          <option value="수박" selected>수박</option>
+          <option value="참외">참외</option>
+          <option value="메론">메론</option>
+        </select>
+        <fieldset>
+          <legend>수강 신청</legend>
+          <label for="">학과</label>
+          <select name="" id="">
+            <optgroup label="공과대학">
+              <option value="건축공학과">건축공학과</option>
+              <option value="기계공학과">기계공학과</option>
+              <option value="산업공학과">산업공학과</option>
+              <option value="컴퓨터공학과">컴퓨터공학과</option>
+            </optgroup>
+            <optgroup label="인문대학">
+              <option value="사학과">사학과</option>
+              <option value="어문학과">어문학과</option>
+              <option value="철학과">철학과</option>
+            </optgroup>
+          </select>
+        </fieldset>
+        <div>
+          <input type="submit" value="전송" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        input type에 쓸 수 있는 유형
+            1) text (★)
+            2) hidden (★)
+            3) search
+            4) tel
+            5) url
+            6) email (★)
+            7) password (★)
+            8) datetime,datetime-local
+            9) date
+            10) month
+            11) week
+            12) time
+            13) number (★)
+            14) range
+            15) color
+            16) file (★) : multiple 부여 가능
+            17) submit (★) 
+            18) reset (★) 
+            19) button (★) 
+            20) checkbox (★)
+            21) radio (★)
+
+        input 속성
+        autofocus : 입력 커서 표시하기
+        placeholder : 힌트 표시 (입력창 사라지는 회색글씨)
+        readonly : 읽기 전용 필드
+        required : 필수 필드 표시 (submit 버튼 클릭 시 입력 값 검증해서 없는 경우 폼을 보내지 않음)
+        min, max, step : date, datetime, datetime-local, month, week, time, number, range 필드만
+        size,minlength,maxlength : text, password, search 필드인 경우
+            size : 화면에 보일 글자 길이
+            minlength, maxlength : 최소길이, 최대길이
+        
+
+     -->
+
+    <form action="" method="get">
+      <div>
+        <label for="">아이디</label>
+        <input
+          type="text"
+          name="id"
+          id=""
+          size="10"
+          minlength="4"
+          maxlength="8"
+        />
+      </div>
+      <div>
+        <label for="">이름</label>
+        <input type="text" name="name" id="" value="홍길동" readonly />
+      </div>
+      <div>
+        <label for="">hidden</label>
+        <!-- hidden : 사용자 '화면' 상에 보이지 않음 : 서버로 넘기는 값을 사용자 모르게 할 때-->
+        <input type="hidden" name="name" />
+      </div>
+      <div>
+        <label for="">search</label>
+        <!-- text와 동일하고, 끝 부분에 x 표시 나타남 -->
+        <input
+          type="search"
+          name="search"
+          id=""
+          autofocus
+          placeholder="검색창"
+        />
+      </div>
+      <div>
+        <label for="">tel</label>
+        <!-- 패턴에 쓸 수 있는 값은 정규식 형태 => 형태에 맞는지 검증 -->
+        <input
+          type="tel"
+          name="tel"
+          id=""
+          pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+          placeholder="010-1234-1234 형태로 입력"
+        />
+      </div>
+      <div>
+        <label for="">url</label>
+        <!-- http:// 형태의 주소가 들어왔는지 검증 -->
+        <input type="url" name="search" id="" />
+      </div>
+      <div>
+        <label for="">email</label>
+        <input type="email" name="email" id="" />
+      </div>
+      <div>
+        <label for="">비밀번호</label>
+        <input type="password" name="password" id="" required />
+      </div>
+      <div>
+        <label for="">datetime</label>
+        <input type="datetime" name="datetime" id="" />
+      </div>
+      <div>
+        <label for="">date</label>
+        <input type="date" name="date" id="" />
+      </div>
+      <div>
+        <label for="">time</label>
+        <input type="time" name="time" id="" />
+      </div>
+      <div>
+        <label for="">datetime-local</label>
+        <input type="datetime-local" name="datetime-local" id="" />
+      </div>
+      <div>
+        <label for="">month</label>
+        <input type="month" name="month" id="" />
+      </div>
+      <div>
+        <label for="">week</label>
+        <input type="week" name="week" id="" />
+      </div>
+      <div>
+        <label for="">number</label>
+        <input
+          type="number"
+          name="number"
+          id=""
+          min="85"
+          max="120"
+          step="5"
+          value="85"
+        />
+      </div>
+      <div>
+        <label for="">range</label>
+        <input type="range" name="range" id="" min="10" max="90" step="5" />
+      </div>
+      <div>
+        <label for="">color</label>
+        <input type="color" name="color" id="" />
+      </div>
+      <div>
+        <label for="">file</label>
+        <input type="file" name="file" id="" multiple />
+      </div>
+      <div>
+        <input type="submit" value="전송" />
+        <!-- reset : 폼 안의 사용자 입력값 초기화 -->
+        <input type="reset" value="초기화" />
+        <!-- button : 버튼 + 자바스크립트 기능 -->
+        <input type="button" value="버튼" />
+      </div>
+    </form>
+  </body>
+</html>

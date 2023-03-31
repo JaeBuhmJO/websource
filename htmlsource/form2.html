@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        사용자에게 여러개를 선택할 수 있는 옵션 제공시
+        checkbox : 이름은 동일하게, value는 체크박스를 선택했을 때 보여줄 값으로 작성
+
+        사용자가 하나만 선택하도록 하는 옵션
+        radio : 이름은 동일하게, value는 라디오를 선택했을 때 보여줄 값으로 작성
+
+            checked : 페이지 띄울 떄 선택되어있는 속성 - 둘 다 사용가능
+     -->
+    <form action="form1.html" method="get">
+      <h3>수강 분야</h3>
+      <ul>
+        <li>
+          <input type="checkbox" name="subject" value="문법" id="grm" />
+          <label for="grm">문법</label>
+        </li>
+        <li>
+          <input type="checkbox" name="subject" value="작문" id="wr" checked />
+          <label for="wr">작문</label>
+        </li>
+        <li>
+          <input type="checkbox" name="subject" value="독해" id="rd" />
+          <label for="rd">독해</label>
+        </li>
+      </ul>
+      <h3>수강 분야 (하나 선택)</h3>
+      <ul>
+        <li>
+          <input type="radio" name="subject1" value="문법" id="grmr" />
+          <label for="grmr">문법</label>
+        </li>
+        <li>
+          <input type="radio" name="subject1" value="작문" id="wrr" checked />
+          <label for="wrr">작문</label>
+        </li>
+        <li>
+          <input type="radio" name="subject1" value="독해" id="rdr" />
+          <label for="rdr">독해</label>
+        </li>
+      </ul>
+      <div>
+        <input type="submit" value="전송" />
+      </div>
+    </form>
+  </body>
+</html>
