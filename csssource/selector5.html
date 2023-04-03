@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>선택자</title>
+    <style>
+      div h2 {
+        color: red;
+      }
+      #container ul {
+        border: 1px solid blue; /* 테두리 : 굵기 모양 색상 */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        스타일 지정을 위해 앞 쪽에 쓰는 선택자는 다양하게 존재함
+        1) 태그 선택자
+        2) 전체 선택자
+        3) class 선택자
+        4) id 선택자 : 한 페이지 내에서 중복 불가(에러는 나지 않음)
+        5) 자손(하위) 선택자 : 부모 자손(자식+손자)
+                              div h2
+
+     -->
+    <div>
+      <h1 id="title">css 기본 문법</h1>
+      <h2 class="color">자손(하위) 선택자</h2>
+    </div>
+    <div>
+      <h1 id="title">css 기본 문법</h1>
+      <nav>
+        <h2>자손(하위) 선택자</h2>
+        <h2>자손(하위) 선택자</h2>
+      </nav>
+    </div>
+
+    <div>
+      <section id="container">
+        <header>
+          <h1>예약방법 및 요금</h1>
+        </header>
+        <p>요안도라 예약 방법</p>
+        <ul>
+          <li>
+            예약방법
+            <ul>
+              <li>직접통화</li>
+              <li>문자남기기</li>
+            </ul>
+          </li>
+          <li>
+            요금
+            <ul>
+              <li>1인 : 40,000원</li>
+              <li>2인 : 60,000원</li>
+              <li>3인 : 80,000원</li>
+              <li>4인 : 100,000원</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>

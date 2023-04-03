@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* font : 글꼴 속성을 한꺼번에 묶어 표현
+            font : font-style, font-variant, font-weight, font-size/line-height, font-family
+        */
+      p {
+        font: 20px "맑은 고딕";
+      }
+      /* font-family : 글꼴, 글꼴명에 공백이 있다면 ''로 묶어주면 됨 */
+      div {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: 30px;
+        line-height: 1.5; /* px단위로 지정 시 글자 크기 바꿀 때 마다 같이 바꿔야함 -> 배수로 가는 것이 좋음*/
+      }
+      .shadow1 {
+        color: orange;
+        text-shadow: 1px 1px; /* 가로거리 세로거리 번짐정도 색상*/
+      }
+      .shadow2 {
+        text-shadow: 5px 5px 3px #f00;
+      }
+      .shadow3 {
+        color: #fff;
+        text-shadow: 7px -7px 5px #000;
+      }
+      .letter {
+        font-size: 20px;
+        letter-spacing: 10px; /* 자간 */
+      }
+      .word {
+        font-size: 20px;
+        word-spacing: 10px; /* 단어 사이의 간격 */
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      여러 요소가 함께 사용된 웹 문서 안에서 텍스트가 눈에 띄게 하려면 내용에
+      맞는 글꼴과 글자 크기, 그리고 글자색을 선택하는 것이 중요합니다.
+    </p>
+    <p>이럴 때 사용할 수 있는 것이 글꼴 속성입니다.</p>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quia
+      placeat, architecto harum pariatur nobis soluta quidem itaque veniam
+      eveniet fugiat saepe, consequatur a omnis ut. Sapiente architecto error
+      unde similique, beatae quis quidem voluptate, quaerat voluptates
+      repudiandae soluta accusantium omnis, vero dignissimos sunt in alias
+      optio? Corporis recusandae consectetur dicta. Obcaecati minus similique
+      corrupti nisi reprehenderit beatae eius libero quod laboriosam veniam
+      expedita error totam, praesentium amet eligendi placeat mollitia sed
+      voluptatem saepe consequatur magnam corporis aperiam laborum! Asperiores
+      doloribus quos rerum ad illum quibusdam mollitia ab, molestiae harum minus
+      fugiat voluptatibus distinctio nesciunt labore nihil quae? Ducimus, eius.
+    </div>
+    <h1 class="shadow1">HTML5</h1>
+    <h1 class="shadow2">HTML5</h1>
+    <h1 class="shadow3">HTML5</h1>
+    <p class="letter">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla aliquid,
+      similique totam reiciendis ea commodi, dolorum ratione, sit rerum dolores
+      quod! Iusto deleniti facere commodi. Incidunt culpa sunt molestias nobis.
+    </p>
+    <p class="word">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptate
+      eaque voluptas, est ut tenetur quo debitis voluptates maiores tempora
+      eveniet porro at sit deleniti aut dignissimos impedit, ratione minima.
+    </p>
+  </body>
+</html>

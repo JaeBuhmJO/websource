@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>선택자</title>
+    <style>
+      div h1 + h2 {
+        color: red;
+      }
+
+      div h1 ~ h2 {
+        color: red;
+      }
+      #container h1 + ul {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        스타일 지정을 위해 앞 쪽에 쓰는 선택자는 다양하게 존재함
+        1) 태그 선택자
+        2) 전체 선택자
+        3) class 선택자 .classname
+        4) id 선택자 : 한 페이지 내에서 중복 불가(에러는 나지 않음) #id
+        5) 자손(하위) 선택자 : 부모 자손(자식+손자)
+                              div h2
+        6) 자식 선택자 : 부모 > 자식 ex) div >h2
+        7) 인접 형제 선택자 +(바로 뒤에 따라나오는), ~(뒤에 따라나오는 모든)
+
+     -->
+    <div>
+      <h1 id="title">css 기본 문법</h1>
+      <h2>인접 형제 선택자</h2>
+      <h2>인접 형제 선택자</h2>
+      <nav>
+        <h2>제목</h2>
+      </nav>
+    </div>
+
+    <section id="container">
+      <h1>예약방법 및 요금</h1>
+      <ul>
+        <li>직접통화</li>
+        <li>문자남기기</li>
+      </ul>
+      <ul>
+        <li>1인 : 40,000원</li>
+        <li>2인 : 60,000원</li>
+        <li>3인 : 80,000원</li>
+        <li>4인 : 100,000원</li>
+      </ul>
+    </section>
+
+    <ul>
+      <li>List Item1</li>
+      <li>List Item2</li>
+      <li>List Item3</li>
+      <li>List Item4</li>
+      <li>List Item5</li>
+    </ul>
+  </body>
+</html>

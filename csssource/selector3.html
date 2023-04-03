@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>선택자</title>
+    <style>
+      /* 클래스명이 color인 요소들의 색상 : blue*/
+      li.color {
+        color: blue;
+      }
+      /* 클래스명이 line인 요소들은 밑줄 */
+      li.line {
+        text-decoration: underline;
+      }
+      /* 클래스명이 weight인 요소들은 굵게 */
+      .weight {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        스타일 지정을 위해 앞 쪽에 쓰는 선택자는 다양하게 존재함
+        1) 태그 선택자
+        2) 전체 선택자
+        3) 클래스 선택자
+
+     -->
+    <div>
+      <h1 id="title">css 기본 문법</h1>
+      <h2 class="color">클래스 선택자</h2>
+    </div>
+    <ul>
+      <!-- li.color.line.weight-->
+      <li class="color">List Item1</li>
+      <li class="color line">List Item2</li>
+      <li class="color line weight">List Item3</li>
+    </ul>
+    <p class="color line weight">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio,
+      excepturi saepe ab odit, facere perferendis explicabo ratione voluptatibus
+      rerum aut sapiente. Dignissimos maxime voluptatum iure tempore explicabo.
+      Nesciunt, et mollitia!
+    </p>
+  </body>
+</html>
