@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        width: 100px;
+        height: 300px;
+        border: 4px solid tomato;
+      }
+      .child {
+        /* width: auto; 생략 => 부모의 width에 대해 100%로 지정됨*/
+        max-width: 800px; /* 부모 요소의 가로 너비가 늘어날 때 자식 요소 너비가 일정 크기를 유지하기 위해 사용 */
+        min-width: 200px;
+        height: 200px;
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        박스 모델
+        1) 태그 요소 상태 - 인라인(옆으로 나열) or 블럭(한 행 나열)
+        2) 요소 크기 : 테두리 + 패딩 + 콘텐츠 영역
+            박스 모델 : 마진 + 테두리 + 패딩 + 콘텐츠 영역
+
+        인라인 요소 : a, img, span, input, textarea, label, button
+
+        블럭 요소 : ul, ol, li, hn, p, form, hr, table, fieldset, ...
+    -->
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+  </body>
+</html>

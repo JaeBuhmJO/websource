@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: #ddd;
+      }
+      .box {
+        background-color: white;
+        /* height: 50px;
+        overflow: auto; */
+      }
+      .left {
+        float: left;
+      }
+      .right {
+        float: right;
+      }
+      p {
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        overflow : 부모 요소의 크기보다 자식요소가 더 커서 자식요소가 넘치는 상황
+        overflow: hidden; => 넘친부분 잘라내고 보이지 않음
+        overflow: auto; => 넘친 부분이 있는 경우만 잘라내고 스크롤로 탐색
+        overflow: scroll; => 넘친 부분을 잘라내고 수평 수직 스크롤바를 무조건 생성
+        overflow: visible; => 기본, 넘친 부분을 그대로 보여주기
+     -->
+    <div class="box">
+      <!-- 자식 태그가 전부 float면 부모 태그는 내용에 따른 height 값을 갖지 못함 => 0이 되면서 영역이 칠해지지 않는다.-->
+      <img src="img/left-arrow.png" alt="왼쪽화살표" class="left" />
+      <img src="img/right-arrow.png" alt="오른쪽화살표" class="right" />
+    </div>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia accusamus
+      nihil, quam numquam quae autem adipisci et commodi nesciunt sunt
+      exercitationem rerum fuga, deleniti obcaecati laboriosam, perferendis
+      expedita perspiciatis? Fugit.
+    </p>
+  </body>
+</html>
