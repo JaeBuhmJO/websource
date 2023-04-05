@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="inline2.css" />
+  </head>
+  <body>
+    <!-- 
+        block 요소를 옆으로 나열하기 위한 방법 
+            1) display : inline-block;
+                - 하단, 오른쪽에 자동으로 공백 생김
+                - vertical-align: top; 하단 공백 제거. 
+                    => g, q 같은 문자 하단부를 위한 공백 제거
+                - font-size: 0; 오른쪽 공백 제거
+                - text-align 속성 사용 가능
+
+            2) float:left, right;
+                -자식 요소들이 float일 때 부모가 자식을 추적하지 못하면서
+                부모의 height가 자식 height 정보를 가져오지 못하고 0이 됨
+                => 1) overflow:hidden => 부모가 높이가 없을 때 자식의 높이를 캐치함
+                    - 부모의 높이는 해결되지만 다른 요소들과의 배치문제가 발생
+                => 2) clear:both;
+                  =>float 다음 요소에서 해제하기
+                  =>가상요소를 써서 해제하기
+                    -inline-block 공백 문제가 없음
+                    -left, right 방식이 자유로움
+                      
+    -->
+    <div class="grid clearfix">
+      <div class="grid-item a"></div>
+      <div class="grid-item b"></div>
+      <div class="grid-item c"></div>
+    </div>
+  </body>
+</html>

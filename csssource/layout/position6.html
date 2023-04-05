@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .food-slide {
+        border: 2px solid green;
+        width: 800px;
+        height: 300px;
+        margin: 0 auto;
+        padding: 10px;
+        position: relative;
+      }
+      img {
+        float: left;
+      }
+      .controls a {
+        background-color: #333;
+        line-height: 50px;
+        color: white;
+        display: block;
+        text-align: center;
+        position: absolute;
+        white-space: nowrap; /* 공백을 기준으로 엔터 적용하지 말것 */
+        top: calc(50% - 25px);
+      }
+      .controls .previous {
+        right: 100%;
+      }
+      .next {
+        left: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="food-slide">
+      <img src="img/tomato.jpg" alt="" />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, qui rem.
+        Praesentium officia soluta facere enim unde facilis rerum quis corporis,
+        dolorum placeat reprehenderit fugiat repudiandae recusandae magni
+        provident quibusdam.
+      </p>
+      <div class="controls">
+        <a href="#" class="previous">previous project</a>
+        <a href="#" class="next">next project</a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding-top: 100px;
+      }
+      .container {
+        width: 500px;
+        height: 300px;
+        margin: 0 auto;
+        background: yellow;
+        position: relative;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+      }
+      .a {
+        background: red;
+        left: -50px;
+        top: 100px;
+      }
+      .b {
+        background: green;
+        right: 200px;
+        top: 100px;
+      }
+      .c {
+        background: blue;
+        right: -50px;
+        top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        position : absolute;
+            위치 상 부모 요소를 기준으로 배치
+            부모요소 : position 값이 부여된 다른 요소
+                  position 값이 부여된 요소가 없다면 화면이 기준
+     -->
+    <div class="container">
+      <div class="box a">box A</div>
+      <div class="box b">box B</div>
+      <div class="box c">box C</div>
+    </div>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur
+      ipsum fuga nesciunt harum rem quaerat, est delectus, ipsam nemo dolorem
+      iste! Officiis iure esse doloribus reiciendis quis repudiandae ullam
+      obcaecati!
+    </p>
+  </body>
+</html>

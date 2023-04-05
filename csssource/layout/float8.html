@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .portfolio {
+        width: 960px;
+        margin: 100px auto;
+        background-color: black;
+        /* overflow : hidden; : 다음 요소가 없다면 가장 간단한 방법
+            부모의 높이가 100px일 때 자식요소가 200px라면 ==> overflow
+            부모의 높이가 지정되지 않았다면 자식 요소의 높이를 계산해서 포함시켜줌
+        */
+      }
+      .portfolio li {
+        list-style: none;
+        width: 225px;
+        height: 225px;
+        background-color: darkcyan;
+        margin-right: 20px;
+        float: left;
+      }
+      .portfolio li:last-child {
+        margin-right: 0px;
+      }
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="portfolio clearfix">
+      <li>pic1</li>
+      <li>pic2</li>
+      <li>pic3</li>
+      <li>pic4</li>
+    </ul>
+  </body>
+</html>

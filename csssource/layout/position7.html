@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box-group {
+        position: relative;
+      }
+      .box {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+      }
+      .box1 {
+        left: 50px;
+        top: 50px;
+        background: red;
+        z-index: 3;
+      }
+      .box2 {
+        left: 110px;
+        top: 70px;
+        background: green;
+        z-index: 1;
+      }
+      .box3 {
+        left: 70px;
+        top: 110px;
+        background: blue;
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        요소 쌓임 순서
+            1. static을 제외한 position 속성 값이 있을 경우 가장 위에 쌓임
+            2. position이 모두 존재한다면 z-index 속성의 값이 높을 수록 위에 쌓임
+            3. position 속성의 값이 있고, z-index 속성의 숫자 값이 같다면 
+                html의 마지막 코드일 수록 위에 쌓임(나중에 작성한 요소)
+     -->
+    <div class="box-group">
+      <div class="box box1">1</div>
+      <div class="box box2">2</div>
+      <div class="box box3">3</div>
+    </div>
+  </body>
+</html>

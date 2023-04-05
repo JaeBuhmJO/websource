@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .content {
+        background-color: skyblue;
+      }
+      .content div {
+        border: 2px solid black;
+        margin-right: 10px;
+        float: left;
+      }
+      img {
+        vertical-align: top; /* 이미지가 원래 가지고 있는 하단 공백 제거 */
+      }
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content clearfix">
+      <div>
+        <img src="https://placehold.co/100" alt="가상이미지" class="thumb" />
+      </div>
+      <div>
+        <img src="https://placehold.co/100" alt="가상이미지" class="thumb" />
+      </div>
+      <div>
+        <img src="https://placehold.co/100" alt="가상이미지" class="thumb" />
+      </div>
+    </div>
+    <h2>float 속성</h2>
+  </body>
+</html>

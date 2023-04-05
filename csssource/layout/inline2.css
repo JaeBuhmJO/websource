@@ -1,0 +1,27 @@
+body {
+  background: #222;
+}
+.grid {
+  width: 500px;
+  margin: 0 auto;
+  background: white;
+}
+.grid-item {
+  width: 100px;
+  height: 100px;
+  float: right;
+}
+.grid-item.a {
+  background: yellow;
+}
+.grid-item.b {
+  background: orange;
+}
+.grid-item.c {
+  background: red;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}

@@ -13,6 +13,8 @@
         background-color: white;
         /* height: 50px;
         overflow: auto; */
+
+        overflow: hidden;
       }
       .left {
         float: left;
@@ -23,6 +25,9 @@
       p {
         border: 2px solid black;
       }
+      .clearfix {
+        clear: both;
+      }
     </style>
   </head>
   <body>
@@ -32,11 +37,15 @@
         overflow: auto; => 넘친 부분이 있는 경우만 잘라내고 스크롤로 탐색
         overflow: scroll; => 넘친 부분을 잘라내고 수평 수직 스크롤바를 무조건 생성
         overflow: visible; => 기본, 넘친 부분을 그대로 보여주기
+
+        float 속성 해제 : clear:both;
+                        overflow:hidden;
      -->
     <div class="box">
       <!-- 자식 태그가 전부 float면 부모 태그는 내용에 따른 height 값을 갖지 못함 => 0이 되면서 영역이 칠해지지 않는다.-->
       <img src="img/left-arrow.png" alt="왼쪽화살표" class="left" />
       <img src="img/right-arrow.png" alt="오른쪽화살표" class="right" />
+      <div class="clearfix">Awesome!!</div>
     </div>
     <p>
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia accusamus
