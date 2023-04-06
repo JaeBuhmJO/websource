@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        height: 400px;
+        border: 2px solid black;
+        align-items: baseline;
+      }
+      .container .item {
+        width: 200px;
+        height: 100px;
+        border: 4px dashed black;
+      }
+      .container .item:first-child {
+        background: red;
+        order: 4;
+      }
+      .container .item:nth-child(2) {
+        background: blue;
+        order: 2;
+      }
+      .container .item:nth-child(3) {
+        background: magenta;
+        font-size: 50px;
+        order: 1;
+      }
+      .container .item:nth-child(4) {
+        background: gray;
+        order: 5;
+      }
+      .container .item:last-child {
+        background: yellow;
+        order: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        flex : 배치되어야 할 요소들을 플렉스 컨테이너로 묶어야 함
+        display: flex;
+        flex-direction: row | row-reverse | column | column-reverse; 배치 방향
+        flex-wrap: no-wrap(기본), wrap, wrap-reverse
+            no-wrap: 한 줄에 표시
+            wrap: 태그 크기 유지하면서 화면 가로폭에 맞춰 아래줄로 이동
+            wrap-reverse: 태그 크기 유지하면서 화면 가로폭에 맞춰 윗줄로 이동
+        order : 배치 순서 변경
+        justify-content : 주 축 정렬
+            flex-start : 주 축의 시작점을 기준으로 배치
+            flex-end : 주 축의 끝점을 기준으로 배치
+            center : 주 축의 중앙을 기준으로 배치
+            space-between : 첫 번째 플렉스 항목과 마지막 플렉스 항목은 시작점과 끝점에 배치 후 중앙 항목들은 같은 간격으로 배치
+            space-around : 각 항목'의' 마진을 동일하게
+            space-evenly : 각 항목'간의' 공간을 동일하게
+        align-content : 교차 축 정렬(여러 줄 배치되는 상황이어야 함)
+            flex-start : 교차 축의 시작점을... => 아래 쭉 justify와 동일
+        align-items : 한 줄일 떄 정렬
+            flex-start,flex-end, center, baseline (텍스트 바닥을 기준으로 정렬)
+
+        수직 => 수평
+        1. display:inline-block;
+        2. float:left or right;
+        3. flex
+        
+     -->
+    <div class="container">
+      <div class="item">A</div>
+      <div class="item">B</div>
+      <div class="item">C</div>
+      <div class="item">D</div>
+      <div class="item">E</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Open Sans";
+        background: #ecf0f1;
+      }
+      .wrapper {
+        width: 100%;
+        margin: 2rem auto;
+        max-width: 60rem;
+        display: flex;
+      }
+      .flexbg {
+        display: flex;
+      }
+      .flexbg main {
+        order: 2;
+        width: 60%;
+      }
+      .flexbg .sidebar {
+        color: white;
+        width: 20%;
+        padding: 1.618rem;
+      }
+      .flexbg .left {
+        order: 1;
+        background: #3498db;
+      }
+      .flexbg .right {
+        order: 3;
+        background: #34495e;
+      }
+      @media screen and (max-width: 768px) {
+        .flexbg {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .flexbg main {
+          order: 1;
+          width: 100%;
+        }
+        .flexbg .sidebar {
+          width: 50%;
+        }
+        .flexbg .left {
+          order: 2;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        .flexbg .sidebar {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper flexbg">
+      <main>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus, rerum id enim ea molestias deleniti totam quo hic
+          temporibus error expedita nemo culpa corporis autem dignissimos
+          consectetur optio qui porro tempora facilis recusandae sit. Quas magni
+          minima sed voluptates sequi cupiditate, saepe natus mollitia ducimus
+          ipsum est repudiandae inventore doloremque.
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus, rerum id enim ea molestias deleniti totam quo hic
+          temporibus error expedita nemo culpa corporis autem dignissimos
+          consectetur optio qui porro tempora facilis recusandae sit. Quas magni
+          minima sed voluptates sequi cupiditate, saepe natus mollitia ducimus
+          ipsum est repudiandae inventore doloremque.
+        </p>
+      </main>
+      <aside class="sidebar left">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam earum
+        blanditiis ea. Dolor alias error facilis similique, rem deserunt fuga
+        distinctio ducimus eum dolorum consectetur natus aspernatur ipsam,
+        assumenda esse magni vero maxime quaerat in aliquid provident quisquam
+        consequuntur culpa? Dignissimos officia laborum officiis cupiditate
+        saepe, error et architecto commodi!
+      </aside>
+      <aside class="sidebar right">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam earum
+        blanditiis ea. Dolor alias error facilis similique, rem deserunt fuga
+        distinctio ducimus eum dolorum consectetur natus aspernatur ipsam,
+        assumenda esse magni vero maxime quaerat in aliquid provident quisquam
+        consequuntur culpa? Dignissimos officia laborum officiis cupiditate
+        saepe, error et architecto commodi!
+      </aside>
+    </div>
+  </body>
+</html>

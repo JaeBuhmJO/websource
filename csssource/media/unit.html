@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        font-size: 12px;
+      }
+      body {
+        font-size: 18px;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+      p {
+        width: 80%;
+        font-size: 1em;
+      }
+      p span {
+        font-size: 0.8em;
+      }
+      .box {
+        float: left;
+        margin-right: 20px;
+        background: blue;
+        color: #fff;
+        text-align: center;
+      }
+      .box_px {
+        width: 160px;
+        height: 160px;
+      }
+      .box_em {
+        width: 10em;
+        height: 10em;
+      }
+      .box_rem {
+        width: 10rem;
+        height: 10rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        크기 단위 : px, %, em, rem
+        1) px : 고정단위 : 브라우저의 크기를 줄이면 스크롤이 발생
+        2) % : 상대단위
+        3) em : em 단위가 쓰여진 곳의 폰트 사이즈 배수
+     -->
+    <h1>css 기본 단위</h1>
+    <h2>단위</h2>
+    <p>
+      <span>Lorem ipsum</span> dolor sit amet consectetur, adipisicing elit. Sed
+      consectetur vel, distinctio porro excepturi assumenda, veniam cumque id
+      placeat quasi quisquam quidem, laboriosam error. Laudantium a ab rerum
+      impedit nesciunt, ipsam molestias facilis incidunt reiciendis dolor
+      voluptates? Harum voluptatum accusamus facere. Fugiat, rem consequuntur
+      quos corporis voluptate esse provident similique.
+    </p>
+    <div class="wrapper">
+      <div class="box box_px">PX</div>
+      <div class="box box_em">EM</div>
+      <div class="box box_rem">REM</div>
+    </div>
+  </body>
+</html>

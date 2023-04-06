@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: url(images/bg0.jpg) no-repeat fixed;
+        background-size: cover;
+      }
+      @media screen and (max-width: 1024px) {
+        body {
+          background: url(images/bg1.jpg) no-repeat fixed;
+          background-size: cover;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        body {
+          background: url(images/bg2.jpg) no-repeat fixed;
+          background-size: cover;
+        }
+      }
+      @media screen and (max-width: 320px) {
+        body {
+          background: url(images/bg3.jpg) no-repeat fixed;
+          background-size: cover;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        반응형 웹 : 웹사이트 디자인 시 pc(데스크탑) 고려
+                    모바일(태블릿, 스마트폰, )
+                    뷰포트 : 실제 내용이 표시되는 영역
+                    => 미디어 쿼리
+                    @media 미디어유형 and (조건) and (조건){
+
+                    }
+                    미디어 유형 : screen(컴퓨터 스크린 + 스마트폰 스크린)
+     -->
+  </body>
+</html>

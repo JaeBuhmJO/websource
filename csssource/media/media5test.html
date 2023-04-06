@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      header {
+        text-align: center;
+      }
+      #menus div {
+        width: 100%;
+        height: 400px;
+        margin-bottom: 20px;
+        border: 1px solid black;
+        background: center no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+      #menus div h2 {
+        position: absolute;
+        right: 50px;
+        bottom: 30px;
+        color: white;
+        text-shadow: 3px 3px 5px black;
+      }
+      #menus #menu1 {
+        background-image: url(images/dish1.jpg);
+      }
+      #menus #menu2 {
+        background-image: url(images/dish2.jpg);
+      }
+      #menus #menu3 {
+        background-image: url(images/dish3.jpg);
+      }
+      #menus #menu4 {
+        background-image: url(images/dish4.jpg);
+      }
+      #menus #menu5 {
+        background-image: url(images/dish5.jpg);
+      }
+      footer {
+        height: 200px;
+        background-color: dimgray;
+      }
+      footer p {
+        color: white;
+        text-align: center;
+        line-height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h1>솔로의 식탁</h1>
+      </header>
+      <section id="menus">
+        <div id="menu1"><h2>밥/죽</h2></div>
+        <div id="menu2"><h2>국/찌개</h2></div>
+        <div id="menu3"><h2>밥/죽</h2></div>
+        <div id="menu4"><h2>일품요리</h2></div>
+        <div id="menu5"><h2>음료/칵테일</h2></div>
+      </section>
+      <footer>
+        <p>솔로의 식탁</p>
+      </footer>
+    </div>
+  </body>
+</html>

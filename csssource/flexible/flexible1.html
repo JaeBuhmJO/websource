@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex; /* 자손 태그들에 대해서 수평배치 하겠음 */
+        flex-direction: column;
+      }
+      .container div {
+        width: 33.3%;
+        height: 300px;
+      }
+      .container div:first-child {
+        background: red;
+      }
+      .container div:nth-child(2) {
+        background: blue;
+      }
+      .container div:last-child {
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        flex : 배치되어야 할 요소들을 플렉스 컨테이너로 묶어야 함
+        display: flex;
+        flex-direction: row | row-reverse | column | column-reverse; 배치 방향
+
+        수직 => 수평
+        1. display:inline-block;
+        2. float:left or right;
+        3. flex
+        
+     -->
+    <div class="container">
+      <div>flex-item1</div>
+      <div>flex-item2</div>
+      <div>flex-item3</div>
+    </div>
+  </body>
+</html>
