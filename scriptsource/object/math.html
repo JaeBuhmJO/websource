@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.write(Math.E + "<br>");
+      document.write(Math.PI + "<br>");
+      document.write(Math.floor(3.14159) + "<br>");
+      document.write(Math.ceil(2.123) + "<br>");
+      document.write(Math.abs(-3) + "<br>");
+      document.write(Math.max(5, 6, 8, 12, 1) + "<br>");
+      document.write(Math.min(5, 6, 8, 12, 1) + "<br>");
+      document.write(Math.sqrt(36) + "<br>");
+
+      //0 <= Math.random() < 1
+      document.write(Math.random() + "<br>");
+      document.write(Math.random() * 10 + "<br>");
+      document.write(Math.floor(Math.random() * 11) + "<br>"); // 0~10 사이
+      document.write(Math.floor(Math.random() * 31) + "<br>"); // 0~30사이
+      document.write(Math.floor(Math.random() * 31) + 120 + "<br>"); // 120~150 사이
+
+      //   임의의 번호 6개를 추출한 후 배열에 담기
+      let arr = new Array();
+      for (let i = 0; i < 6; i++) {
+        let draw = Math.floor(Math.random() * 45) + 1;
+        if (!arr.includes(draw)) {
+          arr.push(draw);
+        } else {
+          i--;
+        }
+      }
+      arr.sort((a, b) => a - b);
+      document.write(arr);
+    </script>
+  </body>
+</html>

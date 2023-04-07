@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // var : 변수 재선언 가능, 할당, 함수레벨(if, while 등의 중괄호를 벗어나서 스코프를 가진다) 스코프
+      // 함수 => 단독으로 실행 가능 / 메소드 => 객체 생성, 생성 후 호출
+      function foobar() {
+        var foo = 5;
+        console.log(foo);
+      }
+      foobar(); //함수 호출
+
+      // 함수 안에서 선언된 변수 사용
+      // console.log(foo); Uncaught ReferenceError: foo is not defined
+
+      if (true) {
+        var a = 6;
+        console.log("블럭 내부 ", a);
+      }
+      console.log("블럭 외부 ", a);
+
+      // let : 변수 재선언 불가, 할당, 블록레벨 스코프
+      function foobar1() {
+        let foo1 = 5;
+        console.log(foo1);
+      }
+      // console.log(foo1); Uncaught ReferenceError: foo1 is not defined
+
+      if (true) {
+        let b = 6;
+        console.log(b);
+      }
+      let b = 7;
+      console.log("새로 선언 ", b);
+      // console.log(b); Uncaught ReferenceError: b is not defined
+    </script>
+  </body>
+</html>

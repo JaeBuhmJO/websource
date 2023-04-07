@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   let number = Number(prompt("숫자를 입력해주세요", "숫자"));
+      //   let number = parseInt(prompt("숫자를 입력해주세요", "숫자"));
+      //   console.log(number);
+      //   console.log(typeof number); //string으로 저장된다.
+
+      //   NaN (Not a Number)
+      //       Number("20 25")
+      // NaN
+      // parseInt("20 25")
+      // 20
+
+      //   if (number > 0) {
+      //     console.log("양수");
+      //   } else if (isNaN(number)) {
+      //     console.log("문자임");
+      //   } else {
+      //     console.log("음수");
+      //   }
+
+      //입력을 받은 후 짝수, 홀수 출력
+
+      let number = Number(prompt("숫자를 입력해주세요", "짝수, 홀수 판별"));
+
+      if (number % 2 == 0) {
+        document.write("짝수");
+      } else {
+        document.write("홀수");
+      }
+    </script>
+  </body>
+</html>

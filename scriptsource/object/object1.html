@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 객체 생성
+      // 1. 생성자 함수
+      // 2. 객체 리터럴 이용
+
+      // 객체 리터럴에 의한 객체 생성 방식
+      let person = {
+        name: ["bob", "Smith"],
+        age: 32,
+        gender: "male",
+        interests: ["music", "skiing"],
+        greeting: function () {
+          alert("Hi!! I'm " + this.name[0] + ".");
+        },
+      };
+      document.write(typeof person + "<br>");
+      console.log(person);
+      document.write(person.name + "<br>");
+      document.write(person.name[1] + "<br>");
+      document.write(person.interests[0] + "<br>");
+      document.write(person.greeting() + "<br>");
+      document.write("<br>");
+
+      let person1 = {
+        name: {
+          first: "bob",
+          last: "Smith",
+        },
+        age: 32,
+        gender: "male",
+        interests: ["music", "skiing"],
+        greeting: function () {
+          alert("Hi!! I'm " + this.name[0] + ".");
+        },
+      };
+      console.log(person1);
+      document.write(person1.name + "<br>");
+      document.write(person1.name.first + "<br>");
+      document.write(person1.name.last + "<br>");
+      console.log(person1["name"]);
+      document.write(person1["name"]["first"] + "<br>");
+      document.write(person1.interests[0] + "<br>");
+
+      document.write("<br>");
+      document.write("<b>객체 복사 후<b/>" + "<br>");
+
+      //복사
+      //원본과 복사본이 같이 수정됨
+      let person2 = person;
+      person2.name[0] = "tomato";
+      document.write("person2.name : " + person2.name + "<br>");
+      document.write("person.name : " + person.name + "<br>");
+
+      //...(spread) 연산자 사용해서 깊은 복사 처리
+      //값의 복사만
+
+      //let person3 = {...person } : name, interests 배열은 얕은 복사가 일어남
+      let person3 = {
+        ...person,
+        name: { ...person.name },
+        interests: { ...person.interests },
+      };
+      person3.name[0] = "Jim";
+      person3.age = 12;
+      document.write("person3.name : " + person3.name[0] + "<br>");
+      document.write("person3.age : " + person3.age + "<br>");
+      document.write("person.name : " + person.name[0] + "<br>");
+      document.write("person.age : " + person.age + "<br>");
+
+      //person1의 프로퍼티 수정
+      person1.name.first = "Cris";
+      //새로운 프로퍼티 추가
+      person1["eyes"] = "hazel";
+      person1.eyes = "hazel";
+      //새로운 메소드 추가
+      person1.farewell = function () {
+        alert("Bye");
+      };
+      console.log(person1);
+    </script>
+  </body>
+</html>

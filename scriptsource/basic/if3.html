@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 수학, 영어, 국어 점수를 입력받은 후 평균을 구한 뒤
+      // 평균에 따라 성적 출력
+
+      //alert() : 경고창
+      //prompt() : 사용자에게 입력받기
+      //confirm() : 확인, 취소 선택
+
+      //   let mathScore = Number(prompt("수학 점수 입력", "점수"));
+      //   let engScore = Number(prompt("영어 점수 입력", "점수"));
+      //   let korScore = Number(prompt("국어 점수 입력", "점수"));
+
+      //   let averageScore = (mathScore + engScore + korScore) / 3;
+
+      //   let grade = "";
+      //   if (averageScore >= 90) {
+      //     grade = "A";
+      //   } else if (averageScore >= 80) {
+      //     grade = "B";
+      //   } else if (averageScore >= 70) {
+      //     grade = "C";
+      //   } else if (averageScore >= 60) {
+      //     grade = "D";
+      //   } else {
+      //     grade = "F";
+      //   }
+      //   console.log(grade);
+      //   document.write(grade);
+
+      let playGame = confirm("게임 한 판 하실래요?");
+
+      if (playGame) {
+        document.write("좋습니다. 게임 한 판 하시죠");
+      } else {
+        document.write("나중에 한 판 하시죠");
+      }
+    </script>
+  </body>
+</html>

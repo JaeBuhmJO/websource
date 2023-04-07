@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //블록 레벨 스코프
+      const value1 = 10;
+      console.log(value1);
+
+      if (true) {
+        const value1 = 20;
+        console.log(value1);
+      }
+
+      // value1 = 15; Uncaught TypeError: Assignment to constant variable.
+      // 재할당 불가 - 상수니까 당연히
+
+      // const value1 = 15;
+      // 재선언도 불가
+    </script>
+  </body>
+</html>

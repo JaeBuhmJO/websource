@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 수학, 영어, 국어 점수를 입력받은 후 평균을 구한 뒤
+      // 평균에 따라 성적 출력
+
+      let mathScore = Number(prompt("수학 점수 입력", "점수"));
+      let engScore = Number(prompt("영어 점수 입력", "점수"));
+      let korScore = Number(prompt("국어 점수 입력", "점수"));
+
+      let averageScore = (mathScore + engScore + korScore) / 3;
+
+      let grade = "";
+      switch (parseInt(averageScore / 10)) {
+        case 10:
+        case 9:
+          grade = "A";
+          break;
+        case 8:
+          grade = "B";
+          break;
+        case 7:
+          grade = "C";
+          break;
+        case 6:
+          grade = "D";
+          break;
+        default:
+          grade = "F";
+          break;
+      }
+      document.write(grade);
+    </script>
+  </body>
+</html>
