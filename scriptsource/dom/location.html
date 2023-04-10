@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button type="button">움직이기</button>
+    <script>
+      //   location.reload(); //새로고침
+
+      // location.replace("이동경로") 이동경로로 이동
+      const move = function () {
+        // location.replace("https://www.naver.com"); // 기존 경로를 날려버리고 이동. 뒤로가기를 불허
+        location.href = "https://www.naver.com"; // 뒤로가기로 컴백 허용 hypertext reference
+      };
+
+      //   move();
+      document.querySelector("button").addEventListener("click", move);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   function add(a, b) {
+      //     return a + b;
+      //   }
+
+      //   const add = function (a, b) {
+      //     return a + b;
+      //   };
+      //   const add2 = function name(a, b) {
+      //     return a + b;
+      //   };
+
+      // 화살표 함수
+      const add = (a, b) => {
+        return a + b;
+      };
+      console.log(add(5, 8));
+
+      const greeting = (name) => {
+        console.log(`Hello!! ${name}`);
+      };
+      greeting("홍길동");
+
+      // {}, return 사용하지 않을 수 있음 ==> 실행할 구문이 2줄 이상이라면 {}을 써야함.
+      // {} 를 하지 않으면 return 생략됨
+      const multiply = (a, b) => a * b;
+      console.log(multiply(6, 5));
+
+      const materials = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
+
+      let arr1 = [];
+      function itemLen() {
+        // for (let index = 0; index < materials.length; index++) {
+        //   arr1.push(materials[index].length);
+        // }
+        // materials.forEach((element) => {
+        //   arr1.push(element.length);
+        // });
+        materials.forEach((element) => arr1.push(element.length));
+      }
+      itemLen();
+      console.log(arr1);
+
+      //배열 요소의 문자 길이를 구해서 새로운 배열로 리턴
+      //   function getLength(a) {
+      //     const b = [];
+      //     for (let i = 0; i < a.length; i++) {
+      //       b.push(a[i].length);
+      //     }
+      //     return b;
+      //   }
+      //   const materialsLength = getLength(materials);
+      //   console.log(materialsLength);
+
+      // map() : 새로운 배열을 만들어 리턴
+      const arr2 = [1, 4, 9, 16];
+      // item *2 새 배열 []
+      const result = arr2.map((element) => element * 2);
+      console.log(result);
+
+      //filter() : 특정 조건에 맞는 새로운 배열을 만들어 리턴
+      const result2 = arr2.filter((x) => x > 10);
+      console.log(result2);
+    </script>
+  </body>
+</html>

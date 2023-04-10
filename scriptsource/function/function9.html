@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .alert-danger {
+        height: 60px;
+        color: #58151c;
+        border: #f1aeb5;
+        border-radius: 10px;
+        background-color: #f8d7da;
+        line-height: 60px;
+        padding-left: 30px;
+        /* 
+          화면에서 안보이게 : display: none; / visibility: hidden;
+          영역을 차지할것인가 : visibility: hidden;
+          말것인가 : display: none;
+        */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="alert alert-danger">
+      <span>10</span>초 이내에 상품 구매시 사은품 증정!!!
+    </div>
+
+    <script>
+      // 동기 함수 : 차례대로 실행(이전 함수가 실행이 안 끝난 경우 다음 함수는 대기)
+      // setTimeout() : 비동기 함수
+      setTimeout(() => {
+        // div 화면에서 안보이게
+        document.querySelector(".alert").style.display = "none";
+      }, 10000);
+
+      //setInterval() : 비동기 함수 : 일정 간격으로 실행
+      // setInterval(() => {
+      //   console.log("안녕");
+      // }, 2000);
+
+      let count = 10;
+      setInterval(() => {
+        count -= 1;
+        if (count >= 0) {
+          document.querySelector(".alert span").innerHTML = count;
+        } else {
+          document.querySelector(".alert span").style.display = "none";
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>

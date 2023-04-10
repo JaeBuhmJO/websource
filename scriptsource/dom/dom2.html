@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>List Item1</li>
+      <li>List Item2</li>
+      <li>List Item3</li>
+      <li>List Item4</li>
+      <li>List Item5</li>
+    </ul>
+    <script>
+      // 요소 찾기 => 여러개 요소라면 HTMLCollection or NodeList로 리턴 됨 ==> 유사 배열
+      // 1. 아이디로 찾기
+      // 2. 태그명으로 찾기
+      const lis = document.getElementsByTagName("li");
+      console.log(lis); // HTMLCollection
+      console.log(lis[0]);
+      // 첫번째 li의 텍스트 노드 값?
+      console.log(lis[0].innerText);
+
+      console.log(lis[2].innerText);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //함수표현식 - 기명함수
+      //f라는 이름은 내부에서만 사용 ==> 재귀함수
+      //   const g = function f(stop) {
+      //     if (!stop) {
+      //       console.log("f stopped");
+      //     }
+      //     f(true);
+      //   };
+      //   g(false);
+
+      const rec = function f(num) {
+        if (num == 0) {
+          console.log(num);
+        } else {
+          f(num - 1);
+          console.log(num);
+        }
+      };
+      rec(10);
+
+      // 즉시 함수 : 함수호출없이 무조건 실행을 한번만 하는 경우
+      (function () {
+        console.log("즉시함수 실행");
+      })();
+
+      // 함수 선언
+      function test(a, b, c, d) {
+        //값이 넘어오지 않은 경우 초기값 지정
+        c = c || 19;
+        d = d || 234;
+
+        console.log("a", a, "b", b, "c", c, "d", d);
+      }
+      test(12, 5, 6);
+
+      //템플릿 문자열
+      function showDialog(greeting, name) {
+        console.log(greeting + "!! " + name);
+        //``(backtic) : 변수와 다른 것들 연결해서 화면 출력
+        console.log(`${greeting}!! ${name}`);
+      }
+      showDialog("안녕하세요", "홍길동");
+    </script>
+  </body>
+</html>
