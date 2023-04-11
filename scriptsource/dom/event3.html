@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="one">
+      one
+      <div class="two">
+        two
+        <div class="three">three</div>
+      </div>
+    </div>
+    <script>
+      //이벤트 버블링 : 특정 화면 요소에서 이벤트가 발생했을 때, 그 이벤트 최상위에 있는 화면요소까지 이벤트가 전파됨
+
+      //e.target : 실제 이벤트가 일어난 대상
+      //e.currentTarget : 이벤트 버블링으로 이벤트가 발생한 모든 요소
+
+      //three 클릭 => three, two, one 출력
+      //two 클릭 => two, one 출력
+      const divs = document.querySelectorAll("div");
+      function logEvent(e) {
+        console.log("e.currentTarget.className ", e.currentTarget.className);
+        // console.log("e.target.className ", e.target.className);
+      }
+      divs.forEach((div) => {
+        div.addEventListener("click", logEvent);
+      });
+    </script>
+  </body>
+</html>

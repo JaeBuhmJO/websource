@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Header 1</h1>
+    <h2>Header 2</h2>
+    <div id="top">
+      <div id="nested">내용</div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, autem.
+        Unde possimus dicta perferendis, harum quidem aliquid tenetur deserunt
+        quia ratione quasi vitae suscipit obcaecati impedit laudantium dolorum
+        est facilis!
+      </p>
+    </div>
+    <script>
+      const h1 = document.querySelector("h1");
+      h1.remove();
+
+      //   const nested = document.querySelector("#nested");
+      //   nested.remove();
+
+      // 부모
+      const d = document.querySelector("#top");
+      // 제거 대상 자식
+      const nested = document.getElementById("nested");
+      d.removeChild(nested);
+    </script>
+  </body>
+</html>

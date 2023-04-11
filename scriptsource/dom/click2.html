@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <label><input type="radio" name="color" id="" />파랑색</label>
+      <label><input type="radio" name="color" id="" />녹색</label>
+    </div>
+    <script>
+      //이벤트 대상 : 라디오 버튼
+      const rds = document.querySelectorAll('input[type="radio"]');
+      //   rds[0].addEventListener("click", () => {
+      //     document.body.style.background = "lightblue";
+      //   });
+      //   rds[1].addEventListener("click", () => {
+      //     document.body.style.background = "green";
+      //   });
+
+      function changeColor(color) {
+        document.body.style.background = color;
+      }
+      rds[0].addEventListener("click", () => changeColor("lightblue"));
+      rds[1].addEventListener("click", () => changeColor("green"));
+    </script>
+  </body>
+</html>

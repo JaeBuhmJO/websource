@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>아래 쪽에 생성되는 태그</div>
+
+    <script>
+      // 요소 생성
+      // window.onload = 화면이 다 보여진 후
+      window.onload = function () {
+        const header = document.createElement("h1");
+        const content = document.createTextNode("Hello DOM");
+
+        //h1과 textNode 연결
+        header.appendChild(content); // <h1>Hello DOM</h1>
+        document.body.appendChild(header);
+
+        const div = document.createElement("div");
+        const content2 = document.createTextNode("Hi there and greetings!");
+        div.appendChild(content2);
+        // document.body.appendChild(content2);
+
+        // div 태그 찾아오기
+        const currentDiv = document.querySelector("div");
+        console.log(currentDiv);
+
+        document.body.insertBefore(div, currentDiv);
+      };
+    </script>
+  </body>
+</html>

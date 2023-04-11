@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <input type="radio" name="gender" id=" " value="남" />남
+      <input type="radio" name="gender" id=" " value="여" />여
+    </div>
+    <script>
+      // 이벤트 대상 : 라디오 버튼
+      //   const rdos = document.querySelectorAll("[name='gender']");
+      //   console.log(rdos);
+
+      //   rdos.forEach((rdo) => {
+      //     // console.log(rdo);
+      //     rdo.addEventListener("click", (e) => {
+      //       //사용자 선택 값을 가져오기
+      //       console.log(e.target);
+      //       console.log(e.target.value);
+      //       const gender = e.target.value;
+      //     });
+      //   });
+
+      // 이벤트 버블링
+      const div = document
+        .querySelector("div")
+        .addEventListener("click", (e) => console.log(e.target.value));
+    </script>
+  </body>
+</html>

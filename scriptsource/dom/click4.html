@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <label
+        ><input
+          type="radio"
+          name="color"
+          id=""
+          data-color="lightblue"
+        />파랑색</label
+      >
+      <label
+        ><input type="radio" name="color" id="" data-color="green" />녹색</label
+      >
+    </div>
+    <script>
+      // click2.html => 이벤트 버블링 + data-
+      function changeColor(e) {
+        document.body.style.background = e.target.dataset.color;
+        // console.log(e.target.dataset.color);
+      }
+      document.querySelector("div").addEventListener("click", changeColor);
+    </script>
+  </body>
+</html>
