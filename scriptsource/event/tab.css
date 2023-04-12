@@ -1,0 +1,31 @@
+ul.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #ccc;
+}
+.tab-button {
+  padding: 10px 20px;
+  float: left;
+  margin-right: -1px;
+  margin-bottom: -1px;
+  color: grey;
+  cursor: pointer;
+}
+ul.list::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.orange {
+  border-top: 2px solid orange;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid white;
+  border-left: 1px solid #ccc;
+  color: black;
+  margin-top: -2px;
+}
+.tab-content {
+  display: none;
+  padding: 10px;
+}

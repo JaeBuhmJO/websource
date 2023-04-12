@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>덧셈 계산기</h3>
+    <form action="">
+      <div>
+        <label>
+          num1
+          <input type="text" name="num1" id="num1" />
+        </label>
+      </div>
+      <div>
+        <label>
+          num2
+          <input type="text" name="num2" id="num2" />
+        </label>
+      </div>
+      <div>
+        <button type="button">더하기</button>
+      </div>
+    </form>
+    <div>결과 <input type="text" name="result" id="result" readonly /></div>
+    <script>
+      document
+        .querySelector("[type='button']")
+        .addEventListener("click", () => {
+          document.getElementById("result").value =
+            parseInt(document.getElementById("num1").value) +
+            parseInt(document.getElementById("num2").value);
+        });
+    </script>
+  </body>
+</html>

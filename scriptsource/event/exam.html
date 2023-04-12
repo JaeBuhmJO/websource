@@ -27,17 +27,19 @@
 
       //turn-on 버튼 클릭 시 img src를 pic_bulbon.gif 변경
       const img = document.querySelector("img");
-      const turnOn = document.querySelector("#turn-on");
-      turnOn.addEventListener(
-        "click",
-        () => (img.src = "../images/pic_bulbon.gif")
-      );
+      document
+        .querySelector("#turn-on")
+        .addEventListener(
+          "click",
+          () => (img.src = "../images/pic_bulbon.gif")
+        );
       //turn-off 버튼 클릭 시 img src를 pic_bulboff.gif 변경
-      const turnOff = document.querySelector("#turn-off");
-      turnOff.addEventListener(
-        "click",
-        () => (img.src = "../images/pic_bulboff.gif")
-      );
+      document
+        .querySelector("#turn-off")
+        .addEventListener(
+          "click",
+          () => (img.src = "../images/pic_bulboff.gif")
+        );
 
       //버튼 누르면 p 보였다 안보였다 하기
       document

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="test">
+      <p>반갑습니다</p>
+    </div>
+    <script>
+      const p = "<p>안녕하세요</p>";
+      // 자식 태그가 없는 경우
+      // document.querySelector("#test").innerHTML = p;
+
+      //   document.querySelector("#test").innerHTML =
+      //     p + document.querySelector("#test").innerHTML;
+
+      const test = document.getElementById("test");
+
+      // insertAdjacentHTML (삽입위치, 삽입할 요소)
+      // 삽입 위치
+      // afterbegin : 지정된 요소의 첫번째 자식 (지정 요소 개시되고 바로)
+      // afterend : 지정된 요소의 다음 형제요소 (지정 요소 열린게 끝나고)
+      // beforebegin : 지정된 요소의 이전 형제요소 (지정 요소 열리기 전 위치)
+      // beforeend : 지정된 요소의 마지막 자식 (지정요소 닫히기 직전 위치)
+      test.insertAdjacentHTML("beforeend", p);
+    </script>
+  </body>
+</html>
