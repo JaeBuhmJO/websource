@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 정규식 패턴 작성하기
+      // flag : g(Global), i(case Insensitive), m(Multiline : 엔터 기준 여러 문장에 걸쳐서)
+      // 1) . : 개행문자를 제외한 모든 문자(숫자,영어,한글,특수문자,공백 등)와 매치(점 하나는 문자 하나)
+      // 2) \ : 정규식 탈출 문자 => \. : 마침표를 찾는다
+      // 3) ^패턴 : 패턴으로 시작하는
+      // 4) 패턴$ : 패턴으로 끝나는
+      // 5) [abc] ==[a|b|c] : a거나 b거나 c 인 모든 개별 문자
+      //     [a-z] : [a|b|c| ~ |z] : a, b, ~ ,z 까지의 모든 개별 문자
+      //     [^패턴] : 패턴에 해당되지 않는 모든 개별 문자 ex) [^0-9] : 0에서 9를 제외한 모든 개별 문자
+      // 6) (on|ues|rida) : on 이거나 ues 거나 rida 인 연속 부분문자 : 캡쳐링 그룹
+      // 7) 수량 패턴 : +(1~무한대), *(0~무한대), ?(0~1)
+      //    a+ : a가 하나이거나 혹은 무한대로 나와도 모두 단일 대상 => 덩어리로 인식함
+      //    a* : a가 없어도 되고 혹은 무한대 ex) ab*c => abc, ac, abbbc 모두 단일 대상
+      //    a? : a가 없거나 딱 하나만 있거나 ex) ab?c => abc, ac, abbbc 에서 abbbc는 대상이 아니다.
+      //    a{1,10} : a가 최소 1번에서 최대 10번까지 반복
+      //    a{1,} = a+ : a가 1에서 무한대
+      // 8) 적극적(greedy) 일치 : 매칭이 가능한 패턴을 전부 찾아버림
+      //    소극적(lazy) 일치 : 최소한으로 찾기
+      // 9) \w : 영어대소문자, 숫자, _ 패턴을 만들 때
+      //    \W : \w의 여집합. 영어대소문자, 숫자, _ 뺀 나머지 개별 문자
+      // 10) \s : 공백, 탭, 개행 문자
+      //     \S : \s의 여집합. 공백, 탭, 개행 문자가 아닌 나머지
+      // 11) /d : 숫자 0-9
+      //     \D : \d의 여집합의 개별 문자
+    </script>
+  </body>
+</html>

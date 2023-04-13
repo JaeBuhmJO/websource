@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .alert-box {
+        background-color: skyblue;
+        padding: 25px;
+        color: white;
+        border-radius: 5px;
+        display: none;
+        position: relative;
+        margin: 0;
+      }
+      .close {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        background-color: black;
+        color: grey;
+        padding: 1px;
+      }
+      button {
+        border: 0;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: rgb(54, 62, 228);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="alert-box">
+      <span class="close"> x </span>
+    </div>
+    <button class="id">아이디</button>
+    <button class="pwd">비밀번호</button>
+    <script>
+      const alertBox = document.querySelector(".alert-box");
+
+      const notification = function (state, msg) {
+        // msg가 안 들어오는 경우
+        // console.log(msg);
+        alertBox.style.display = state;
+
+        if (msg != undefined) {
+          console.log(alertBox.firstChild); //alert-box 다음의 엔터를 퍼스트 차일드로 가져오게됨?
+          console.log(alertBox.firstChild.nodeValue);
+
+          alertBox.firstChild.nodeValue = msg;
+        }
+      };
+
+      // 아이디를 클릭하면 아이디를 입력해 주세요 메세지 alert 보여주기
+      document.querySelector(".id").addEventListener("click", () => {
+        notification("block", "아이디를 입력해주세요");
+      });
+
+      // 비밀번호를 클릭하면 비밀번호를 입력해 주세요 메세지 alert 보여주기
+      document.querySelector(".pwd").addEventListener("click", () => {
+        notification("block", "비밀번호를 입력해주세요");
+      });
+
+      document
+        .querySelector(".close")
+        .addEventListener("click", () => notification("none"));
+    </script>
+  </body>
+</html>

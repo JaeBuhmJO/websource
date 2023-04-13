@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .box {
+        width: 150px;
+        height: 80px;
+      }
+      .box1 {
+        background: yellow;
+
+        transform: translate(0);
+        transition: all 500ms;
+      }
+      .box2 {
+        margin: 500px 100px;
+        background: red;
+        transition: all 40ms;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box1">Hello World</div>
+    <div class="box box2">Hello World</div>
+    <script>
+      //box1 클릭 시 박스위치를 이동
+      document.querySelector(".box1").addEventListener("click", (e) => {
+        //박스 위치 이동
+        e.target.style.transform = `translate(100px, 300px)`;
+      });
+
+      document.querySelector(".box2").addEventListener("click", (e) => {
+        e.target.style.transform = `scaleY(0.5) scaleX(1.2)`;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h4>정규 표현식과 일치하는 문자열 리턴</h4>
+      <p id="exec"></p>
+    </div>
+    <div>
+      <h4>정규 표현식과 일치하는 문자열이 있으면 true, 없으면 false</h4>
+      <p id="test"></p>
+    </div>
+    <div>
+      <h4>정규 표현식과 일치하는 문자열 리턴</h4>
+      <p id="match"></p>
+    </div>
+    <div>
+      <h4>정규 표현식과 일치하는 위치 리턴</h4>
+      <p id="search"></p>
+    </div>
+    <script>
+      // ex)아이디 : 영어(대문자 필히 하나는 넣어야함), 숫자, 특수문자 / 비밀번호 : 한글은 안됨 같은거
+
+      // 정규 표현식(자바, 자바스크립트, 파이썬)이 필요함
+
+      // 스크립트에서 정규식 생성
+      //   const re = /ab+c/;
+      //   const re = new RegExp("ab+c");
+
+      const origin = "Javascript jQuery Ajax";
+      // 원본 문자열에 Ajax가 포함되었는지 확인
+      //   const re = new RegExp("Ajax");
+      const re = /Ajax/;
+
+      document.getElementById("exec").innerHTML = re.exec(origin);
+      document.getElementById("test").innerHTML = re.test(origin);
+      // 문자열에 있는 메소드를 쓰기 떄문에 위치 변경
+      document.getElementById("match").innerHTML = origin.match(re);
+      document.getElementById("search").innerHTML = origin.search(re);
+    </script>
+  </body>
+</html>
