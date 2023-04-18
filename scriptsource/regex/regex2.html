@@ -7,7 +7,20 @@
     <title>Document</title>
   </head>
   <body>
+    <p>010123456781</p>
+    <div class="result"></div>
     <script>
+      //전화번호 체크 정규식
+
+      const re = /^(01[0-9])-?[0-9]{3,4}-?[0-9]{4}$/;
+      const re2 = /^\d{3}-?\d{3,4}-?\d{4}$/;
+      // re.test(원본문자열)
+
+      let result = re.test(document.querySelector("p").innerText);
+      if (result == false) {
+        document.querySelector(".result").innerHTML =
+          "올바른 전화번호가 아닙니다.";
+      }
       // 정규식 패턴 작성하기
       // flag : g(Global), i(case Insensitive), m(Multiline : 엔터 기준 여러 문장에 걸쳐서)
       // 1) . : 개행문자를 제외한 모든 문자(숫자,영어,한글,특수문자,공백 등)와 매치(점 하나는 문자 하나)

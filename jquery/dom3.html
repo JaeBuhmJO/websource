@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <input type="text" name="username" id="username" />
+      <button class="confirm" type="button">클릭</button>
+      <button class="confirm" type="submit">확인</button>
+      <button class="confirm" type="reset">취소</button>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      // 요소 찾기 => 여러개 요소라면 HTMLCollection ==> forEach 안됨
+      //                            or NodeList ==> forEach 가능
+
+      // 1. 아이디로 찾기 좋고
+      // 2. 태그명으로 찾기 보다는
+      // 3. 클래스명으로 찾기 보다는
+      // 4. css 선택자로 찾기가 좋다
+      const btns = $(".confirm");
+      console.log(btns);
+      console.log(btns[0]);
+
+      for (let i = 0; i < btns.length; i++) {
+        console.log(btns[i]);
+      }
+
+      // css 선택자 : document.querySelector(css 선택자), document.querySelectorAll(css 선택자)
+      //                가장 처음에 만나는 요소 찾아옴,         전체 요소 찾아옴(NodeList)
+      //   const btns1 = document.querySelector(".confirm");
+      const btns1 = $(".confirm"); // NodeList로 찾아옴
+      console.log(btns1);
+
+      $.each(btns1, function (idx, item) {
+        cos.log(item);
+        console.log($(this)); // == item
+        console.log($(this).text());
+      });
+    </script>
+  </body>
+</html>

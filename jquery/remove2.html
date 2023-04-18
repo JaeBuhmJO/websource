@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .header {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="header" class="header">Header 1</h1>
+    <h2 id="header2" class="header">Header 2</h2>
+    <div id="top">
+      <div id="nested">내용</div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, autem.
+        Unde possimus dicta perferendis, harum quidem aliquid tenetur deserunt
+        quia ratione quasi vitae suscipit obcaecati impedit laudantium dolorum
+        est facilis!
+      </p>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      //css() : 스타일 줄 때
+      //attr() : 속성 추가
+
+      const h1 = $("h1");
+
+      // 속성 추가
+      h1.attr("name", "title");
+
+      // setAttribute(), removeAttribute() == attr(), removeAttr()
+      h1.removeAttr("class"); // 제거할 속성명
+
+      // h2 id 속성 제거
+      const h2 = $("h2");
+      h2.removeAttr("id");
+
+      h2.html("");
+    </script>
+  </body>
+</html>

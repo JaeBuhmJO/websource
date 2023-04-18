@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <!-- jquery 사용을 위해 라이브러리 가져오기-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      // jquery 시작할 때 $ 로 시작함
+      $(function () {
+        // p태그 찾아오기
+        // document.querySelector("#demo");
+        const demo = $("#demo");
+        console.log(demo);
+
+        // 문자열 삽입
+        document.querySelector("#demo").innerHTML = "문자열";
+        // innerHTML => html() / innerText => text()
+        // value => val()
+        $("#demo").html("문자열");
+      });
+    </script>
+  </body>
+</html>

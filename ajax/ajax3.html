@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        display: flex;
+        background: lightblue;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+      }
+      .container li {
+        margin: 0 10px;
+        width: 25%;
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="container">
+      <li>메뉴1</li>
+      <li>메뉴2</li>
+      <li>메뉴3</li>
+      <li>메뉴4</li>
+    </ul>
+    <div></div>
+
+    <script>
+      // XML : Extensible Markup Language
+      // ajax(Asynchronous JavaScript and XML)
+      // 동기식 : 서버와 통신할 때 전체 페이지를 리프레시 하는 방식
+      // 비동기식 : 서버와 통신하기 위해 데이터만 주고 받는 방식
+      //    => 페이지 전체 중 일부만 갱신하거나 수정할거라면, 비동기를 활용해야함
+
+      // XML : 데이터 정의하고 저장
+      //       웹 사이트 자료 공유하기 편함
+      //       사용자 정의 태그
+
+      // JSON : 데이터 정의하고 저장
+      //        텍스트 기반 방식(쉽게 작성, 가볍다)
+      //        자바스크립트 객체 정의하는 방식과 같음
+
+      // ajax 구현
+      // 1. 자바스크립트 XMLHttpRequest 객체 사용하기(==> 어렵다, 코드의 양이 많음)
+      // 2. fetch api 사용
+      // 3. axios 사용 (node.js)
+
+      //   fetch("데이터를 가져올 서버 주소")
+      //   .then((response)=>response.json()) // 가져온 데이터를 원하는 형태로 변경 (파싱)
+      //   .then((data)=>console.log(data)); // 변경된 데이터를 사용
+
+      // response.json() : json 응답을 자바스크립트 객체로 파싱
+      // JSON.stringify(data) : 자바스크립트 객체를 json으로 변경
+
+      // 메뉴 1 클릭하면
+      // data.html 가져와서 화면에 보여주기(refresh 없이)
+      const li1 = document.querySelector(".container li:first-child");
+
+      // 메뉴 2 클릭하면
+      // version.json 가져와서 화면에 보여주기 (refresh없이)
+      const li2 = document.querySelector(".container li:nth-child(2)");
+
+      li2.addEventListener("click", () => {
+        fetch("https://JaeBuhmJo.github.io/data/version.json")
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+
+            let result = "<ul><li>";
+            result += "<li>version : " + data.version + "</li>";
+            result += "<li>codename : " + data.codename + "</li>";
+            result += "</ul>";
+
+            document.querySelector("div").innerHTML = result;
+          });
+      });
+    </script>
+  </body>
+</html>

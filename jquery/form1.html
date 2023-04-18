@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="form4.html" method="get">
+      <div>
+        <label for="num1">이름</label>
+        <input type="text" name="username" id="username" size="5" />
+      </div>
+      <div>
+        <label for="num1">나이</label>
+        <input type="text" name="age" id="age" size="5" />
+      </div>
+      <button type="button" id="list">리스트</button>
+      <button type="button" id="update">수정</button>
+      <button type="button" id="remove">삭제</button>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      //각각의 버튼이 클릭이 되면 form의 action을 다르게 지정
+      const form = $("form");
+
+      $("#list").on("click", function () {
+        form.attr("action", "click1.html");
+        //form 안의 age 요소 삭제 후 전송
+        $("#age").remove();
+        form.submit();
+      });
+      $("#update").on("click", function () {
+        form.attr("action", "click2.html");
+        form.append("<input type='hidden' name='no' value='3'>");
+        form.submit();
+      });
+      $("#remove").on("click", function () {
+        form.attr("action", "remove1.html");
+      });
+    </script>
+  </body>
+</html>

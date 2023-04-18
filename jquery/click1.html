@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        font-size: 35px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="outside">
+      <tr>
+        <td id="t1">one</td>
+      </tr>
+      <tr>
+        <td id="t2">two</td>
+      </tr>
+    </table>
+    <p id="demo">Click Me!</p>
+    <a href="#">여기로</a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      // table 클릭 시 two <-> three
+
+      // 이벤트 대상 찾아오기
+      const table = $("#outside");
+
+      // 이벤트 핸들러 연결
+      table.on("click", function () {
+        const t2 = $("#t2");
+        const isThree = t2.text() === "three";
+        t2.text(isThree ? "two" : "three");
+      });
+
+      // p 요소 클릭 시 텍스트 문자 변경
+      // Good Job!!
+      $("#demo").on("click", function (e) {
+        console.log(e.target);
+        $(this).text("Good Job!!");
+      });
+    </script>
+  </body>
+</html>

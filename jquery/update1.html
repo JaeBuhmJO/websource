@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="header" class="one two">Header 1</h1>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      // class 변경
+      let h1 = $("#header");
+      // 전체 클래스명
+      console.log(h1.classList);
+
+      // 특정 클래스명 변경
+
+      // 클래스 추가
+      h1.addClass("red");
+
+      // 이미 클래스명이 존재한다면 없애고, 없으면 추가
+      h1.toggleClass("green");
+      h1.toggleClass("two");
+
+      // 클래스 이름 제거
+      h1.removeClass("one");
+      console.log(h1.hasClass("red"));
+    </script>
+  </body>
+</html>

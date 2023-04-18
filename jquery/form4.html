@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div * {
+        padding: 10px;
+        margin: 10px;
+      }
+      [readonly] {
+        background-color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>숫자 맞추기 게임</h3>
+    <p>
+      이 게임은 컴퓨터가 생성한 숫자를 맞추는 게임입니다.
+      <br />
+      숫자는 1 ~ 100 사이에 있습니다.
+    </p>
+    <div>
+      <label for="num1">숫자(입력)</label>
+      <input type="text" name="num1" id="num1" size="5" />
+      <button type="button">정답 확인</button>
+    </div>
+    <div>
+      <label for="count">추측횟수</label>
+      <input type="text" name="count" id="count" size="5" readonly />
+    </div>
+    <div>
+      <label for="hint">힌트</label>
+      <input type="text" name="hint" id="hint" size="30" readonly />
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      // 크다 작다를 알려주고 추측 횟수는 차차 증가.
+      //임의의 숫자 생성(1~100)
+      const btn = $("[type='button']");
+      const randomNumber = parseInt(Math.random() * 100 + 1);
+      console.log(randomNumber);
+      let trial = 0;
+
+      btn.on("click", function () {
+        const inputNumber = parseInt($("#num1").val());
+        if (isNaN(inputNumber)) {
+          alert("숫자를 입력해주세요");
+          return;
+        }
+
+        trial++;
+        $("#count").val(trial);
+
+        let result = "";
+        if (inputNumber > randomNumber) {
+          result = "추측값이 많습니다";
+        } else if (inputNumber < randomNumber) {
+          result = "추측값이 적습니다";
+        } else {
+          result = "정확합니다";
+          btn.attr("disabled", "true");
+        }
+        $("#hint").val(result);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 10px;
+      }
+      .box1 {
+        width: 400px;
+        background: green;
+        color: white;
+        padding: 15px;
+        text-align: center;
+      }
+      .box2 {
+        width: 400px;
+        margin-top: 15px;
+        text-align: center;
+      }
+      #msg {
+        border-radius: 5px;
+        border: 2px solid #73ad21;
+        padding: 10px;
+        margin-top: 15px;
+        width: 400px;
+        height: 200px;
+        font-size: 14px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <div class="box1">일별 박스 오피스</div>
+      <div class="box2">
+        <input type="text" name="txtYear" id="txtYear" size="4" />년
+        <select name="selMon" id="selMon">
+          <option value="01">1월</option>
+          <option value="02">2월</option>
+          <option value="03">3월</option>
+          <option value="04">4월</option>
+          <option value="05">5월</option>
+          <option value="06">6월</option>
+          <option value="07">7월</option>
+          <option value="08">8월</option>
+          <option value="09">9월</option>
+          <option value="10">10월</option>
+          <option value="11">11월</option>
+          <option value="12">12월</option>
+        </select>
+        <!-- select>option[value="$"]{$일}*31] -->
+        <select name="selDay" id="selDay">
+          <option value="01">1일</option>
+          <option value="02">2일</option>
+          <option value="03">3일</option>
+          <option value="04">4일</option>
+          <option value="05">5일</option>
+          <option value="06">6일</option>
+          <option value="07">7일</option>
+          <option value="08">8일</option>
+          <option value="09">9일</option>
+          <option value="10">10일</option>
+          <option value="11">11일</option>
+          <option value="12">12일</option>
+          <option value="13">13일</option>
+          <option value="14">14일</option>
+          <option value="15">15일</option>
+          <option value="16">16일</option>
+          <option value="17">17일</option>
+          <option value="18">18일</option>
+          <option value="19">19일</option>
+          <option value="20">20일</option>
+          <option value="21">21일</option>
+          <option value="22">22일</option>
+          <option value="23">23일</option>
+          <option value="24">24일</option>
+          <option value="25">25일</option>
+          <option value="26">26일</option>
+          <option value="27">27일</option>
+          <option value="28">28일</option>
+          <option value="29">29일</option>
+          <option value="30">30일</option>
+          <option value="31">31일</option>
+        </select>
+        <button type="button" id="btn1">확인</button>
+      </div>
+      <div id="msg"></div>
+      <div class="box3"></div>
+    </form>
+    <script>
+      // 영화진흥위원회 Open API를 이용한 서비스
+      // Open API : 공개 API(누구나 사용 가능한 API)
+      //          : 공개된 데이터
+      //          : 네이버, 카카오, 서울 열린데이터광장, 공공데이터포털, ...
+
+      // 전일자 1 ~ 10위 영화 순위를 제공
+    </script>
+    <script src="movie.js"></script>
+  </body>
+</html>
